@@ -12,7 +12,7 @@
 | WEBSITE:          https://holesatech.co.tz
 | -----------------------------------------------------
 */
-function _cleaninjections($test) {
+function holesainject($test) {
 
     $find = array(
         "/[\r\n]/", 
@@ -30,7 +30,7 @@ function _cleaninjections($test) {
     return $ret;
 }
 
-function generate_csrf_token() {
+function holesageneratescsrftoken() {
 
     if (!isset($_SESSION)) {
 
@@ -43,16 +43,16 @@ function generate_csrf_token() {
     }
 }
 
-function insert_csrf_token() {
+function holesainsertcsrftokeninform() {
 
-    generate_csrf_token();
+    holesainsertcsrftokeninform();
 
     echo '<input type="hidden" name="token" value="' . $_SESSION['token'] . '" />';
 }
 
-function verify_csrf_token() {
+function holesaverifygeneratedcsrftoken() {
 
-    generate_csrf_token();
+    holesainsertcsrftokeninform();
 
     if (!empty($_POST['token'])) {
 
