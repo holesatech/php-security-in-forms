@@ -5,5 +5,5 @@ to overcome header injection insert the following in script that handle submitio
 
     foreach($_POST as $key => $value){
 
-        $_POST[$key] = _cleaninjections(trim($value));
+        $_POST[$key] = holesainject(trim($value));
     }
